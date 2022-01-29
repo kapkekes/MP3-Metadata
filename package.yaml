@@ -1,30 +1,32 @@
-name:                monomer-starter
+name:                MP3-Metadata
 version:             0.1.0.0
-#synopsis:
-#description:
-homepage:            https://github.com/githubuser/monomer-starter#readme
+# synopsis:
+# description:
+homepage:            https://github.com/kapkekes/MP3-Metadata#readme
 license:             BSD3
-author:              Author name here
-maintainer:          example@example.com
+author:              Dmitriy Vashurin
+maintainer:          kapkekes@example.com
 copyright:           2021 Author name here
-#category:
+# category:
+
 extra-source-files:
 - README.md
+- ChangeLog.md
 
 default-extensions:
 - OverloadedStrings
 
 dependencies:
-  - base >= 4.7 && < 5
-  - data-default
-  - lens
-  - monomer
-  - text
-  - text-show
+- base >= 4.7 && < 5
+- data-default
+- lens
+- monomer
+- text
+- text-show
 
 executables:
   app:
-    source-dirs:      src
+    source-dirs:      source
     main:             Main.hs
     ghc-options:
     - -fwarn-incomplete-patterns

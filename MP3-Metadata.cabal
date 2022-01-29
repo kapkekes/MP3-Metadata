@@ -4,24 +4,25 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           monomer-starter
+name:           MP3-Metadata
 version:        0.1.0.0
-homepage:       https://github.com/githubuser/monomer-starter#readme
-author:         Author name here
-maintainer:     example@example.com
+homepage:       https://github.com/kapkekes/MP3-Metadata#readme
+author:         Dmitriy Vashurin
+maintainer:     kapkekes@example.com
 copyright:      2021 Author name here
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
+    ChangeLog.md
 
 executable app
   main-is: Main.hs
   other-modules:
-      Paths_monomer_starter
+      Paths_MP3_Metadata
   hs-source-dirs:
-      src
+      source
   default-extensions:
       OverloadedStrings
   ghc-options: -fwarn-incomplete-patterns -threaded
