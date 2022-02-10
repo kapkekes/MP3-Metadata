@@ -26,7 +26,7 @@ dependencies:
 
 executables:
   app:
-    source-dirs:      source
+    source-dirs:      application
     main:             Main.hs
     ghc-options:
     - -fwarn-incomplete-patterns

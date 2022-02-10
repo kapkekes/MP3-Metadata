@@ -26,13 +26,13 @@ buildUI :: WidgetEnv AppModel AppEvent
         -> AppModel
         -> WidgetNode AppModel AppEvent
 buildUI wenv model = widgetTree where
-    widgetTree = vstack [
-        label "Hello world",
-        spacer,
-        hstack [
-            label $ "Click count: " <> showt (model ^. clickCount),
-            spacer,
-            button "Increase count" AppIncrease
+    widgetTree = vstack
+        [ label "Hello world"
+        , spacer
+        , hstack
+            [ label $ "Click count: " <> showt (model ^. clickCount)
+            , spacer
+            , button "Increase count" AppIncrease
             ]
         ] `styleBasic` [padding 10]
 
@@ -49,10 +49,10 @@ main :: IO ()
 main = do
     startApp model handleEvent buildUI config
     where
-        config = [
-            appWindowTitle "Hello world",
-            appTheme darkTheme,
-            appFontDef "Regular" "./assets/fonts/Roboto-Regular.ttf",
-            appInitEvent AppInit
+        config =
+            [ appWindowTitle "Hello world"
+            , appTheme darkTheme
+            , appFontDef "Regular" "./assets/fonts/Roboto-Regular.ttf"
+            , appInitEvent AppInit
             ]
         model = AppModel 0
